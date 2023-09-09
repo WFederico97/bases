@@ -1,14 +1,15 @@
 (() => {
   //* Agrego el simbolo '?' para que sea opcional el tipo de dato
   const fullName = (
-    firstName: string,
-    upper: boolean,
-    lastName?: string
-  ): string => {
-    return `${firstName} ${lastName || " "} `;
+    firstName: string,lastName?: string,upper: boolean = false, ): string => {
+    if (upper) {
+      return `${firstName} ${lastName || " ---"} `.toUpperCase()
+    } else {
+      return `${firstName} ${lastName || " ---"} `
+    }
   };
 
-  const name = fullName("tony", true);
+  const name = fullName("tony", 'stark', true);
 
-  console.log({ name });
+  console.log({ name: name });
 })();
