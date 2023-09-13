@@ -6,17 +6,22 @@
         age: 24,
         powers: ['Super Velocidad', 'viajar en el tiempo']
     }
-
-    flash ={
-        name: 'Quiñon Jijo',
+    let superman: {name: string, age: number, powers: string[], getName?: ()=> string} = {
+        name: 'Clark Kent',
         age: 55,
-        powers: ['super fuerza'],
-        getName() {
-            return this.name
-        },
-        //?la funcion getName la declaramos en el objeto de arriba , siendo un tipo funcion que devuelva un string
+        powers: ['Super Velocidad']
     }
 
-    console.log(flash.getName?.())
+    // flash ={
+    //     name: 'Quiñon Jijo',
+    //     age: 55,
+    //     powers: ['super fuerza'],
+    //     getName() {
+    //         return this.name
+    //     },
+    //     //?la funcion getName la declaramos en el objeto de arriba , siendo un tipo funcion que devuelva un string
+    // }
+
+    // console.log(flash.getName?.())
 
 })()
