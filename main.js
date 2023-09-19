@@ -1,40 +1,33 @@
 "use strict";
 (() => {
-    const ironman = {
-        name: 'Ironman',
-        weapon: 'ArmorSuit'
-    };
-    const batman = {
-        name: 'Batman',
-        weapon: 'Bati Movil'
-    };
-    const flash = {
-        name: 'Flash',
-        weapon: 'Super Velocidad'
-    };
-    const avengers = [ironman, batman, flash];
-    for (const avenger of avengers) {
-        console.log(avenger);
+    class Avenger {
+        constructor(name, team, realName) {
+            this.name = name;
+            this.team = team;
+            this.realName = realName;
+        }
     }
+    Avenger.avgAge = 35;
+    const antMan = new Avenger("Antman", "Capitan", "scott lang");
 })();
 (() => {
-    const avengers = {
-        nick: "Samuel L. Jackson",
-        ironman: "Robert Downey Jr",
-        vision: "Paul Bettany",
-        activo: true,
-        poder: 1500,
-    };
-    const printAvengers = ({ activo, poder }) => {
-        console.log(poder);
-    };
-    printAvengers(avengers);
-    const avengersArr = ['CAP America', false, 123];
-    const [heroe, isDead] = avengersArr;
-    console.log({ heroe, isDead });
-})();
-(() => {
-    let a = "Federico";
-    console.log(a);
+    class Avenger {
+        constructor(name, realName) {
+            this.name = name;
+            this.realName = realName;
+            console.log('Constructor Avenger llamado!');
+        }
+        getFullName() {
+            return `${this.name} ${this.realName}`;
+        }
+    }
+    class Xmen extends Avenger {
+        constructor(isMutant) {
+            super('Wolverine', 'Logan');
+            this.isMutant = isMutant;
+        }
+    }
+    const wolverine = new Xmen(true);
+    console.log(wolverine);
 })();
 //# sourceMappingURL=main.js.map
