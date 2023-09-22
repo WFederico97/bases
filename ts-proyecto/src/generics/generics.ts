@@ -10,6 +10,4 @@ export function genericFn<T> (argument: T) { //! con <T> designamos que una func
     return argument;
 }
 
-export const genericArrowFn = <T> (argument: T) => {
-    return argument
-}
+export const genericArrowFn = <T> (argument: T) =>  argument;
