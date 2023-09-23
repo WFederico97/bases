@@ -1,7 +1,5 @@
 import { getPokemon } from "./generics/getPokemon";
+import { Pokemon } from "./decorators/pokemon-class";
 
-
-getPokemon(20)
-    .then(pokemon => console.log(pokemon.sprites.front_default))
-    .catch(error => console.log(error))
-    .finally(()=> console.log('fin pokemon'))
+const charmander = new Pokemon('Charmander')
+console.log(charmander)
